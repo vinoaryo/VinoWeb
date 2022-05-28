@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300&display=swap");
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+
+body{
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;   
+  background-color: #D3D3D3;
+  font-family: "Montserrat", sans-serif;
+  width: 49.5;
+  color: black;
+  transition-duration: 500ms;
+  overflow: hidden;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+.ui-btn-text {
+  
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+/* Style page content */
+.main {
+  padding: 0px 10px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.intro {
+	margin-top: 100px;
+  border-radius: 5px;
+	font-size: 50px;
+  animation: blink 2s infinite ease-in-out;
+}
+
+@keyframes blink {
+  0%{}
+  25%{background-color: red;}
+  50%{background-color: blue;}
+  75%{background-color: greenyellow;}
+  100%{}
+}
+
+.maintext {
+	margin-top: -25px;
+}
+
+.discord{
+	background-color:	#0000ff;
+	padding: 15px 115px;
+	border-radius: 15px;
+	font-size: 25px;
+	text-decoration: none;
+	color: white;
+	transition-duration: 0.5s;
+}
+.discord:hover{
+	background-color: #282b30;
+}
+
+.discord:hover .fa-discord{
+  color: #0000ff;
+  animation: spin 1s 1;
+  transition-duration: 0.5s;
+}
+
+@keyframes spin {
+  from {
+      transform:rotate(0deg);
+  }
+  to {
+      transform:rotate(360deg);
+  }
+}

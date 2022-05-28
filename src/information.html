@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width-device-width, initial-scale=1.0" />
+    <link rel="icon" href="../images/B&WVinoWeb.png" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-1.6.4.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <link href="mainstyle.css" rel="stylesheet" crossorigin="anonymous" />
+    <title>VinoWeb</title>
+  </head>
+  <body>
+    <div class="mainpage" data-role="page">
+      <div
+        class="underconstruction text-center container position-absolute top-50 start-50 translate-middle"
+      >
+        <h2>Sorry the developer is too lazy to make this page</h2>
+        <h3>
+          If you know what to put in this page you can message the developer
+        </h3>
+        <h3><a class="uchref" href="mailto:vinoaryo2000@gmail.com">here.</a></h3>
+      </div>
+    </div>
+
+    <footer class="text-center text-lg-start fixed-bottom" data-role="footer">
+      <!-- Copyright -->
+      <div
+        class="text-center p-3"
+        style="background-color: #343a40; color: white"
+        id="footerDiv"
+      >
+        <span class="mt-2 footer-title">VinoWeb</span>
+        <br />
+        <div class="row">
+          <div class="col">
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="btncheck1"
+              autocomplete="off"
+            />
+            <label
+              class="btn btn-outline-primary"
+              for="btncheck1"
+              onclick="location.href = '../index.html'"
+              >Home</label
+            >
+          </div>
+          <div class="col">
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="btncheck2"
+              autocomplete="off"
+            />
+            <label
+              class="btn btn-outline-primary"
+              onclick="darkMode()"
+              for="btncheck2"
+              >DarkMode</label
+            >
+          </div>
+          <div class="col">
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="btncheck3"
+              autocomplete="off"
+            />
+            <label
+              class="btn btn-outline-primary"
+              for="btncheck3"
+              onclick="location.href = 'information.html'"
+              >Information</label
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      function darkMode() {
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+      }
+    </script>
+  </body>
+  <style>
+    * {
+      overflow: hidden;
+    }
+
+    .informationCard .text-secondary {
+      text-align: right;
+    }
+
+    .dark-mode {
+      background-color: black;
+    }
+
+    .uchref:hover {
+      text-decoration: none;
+      color: #343a40;
+    }
+  </style>
+</html>

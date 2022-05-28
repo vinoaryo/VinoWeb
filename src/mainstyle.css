@@ -1,0 +1,20 @@
+body{
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;   
+  background-color: white;
+  font-family: "Montserrat", sans-serif;
+  width: 49.5;
+  color: black;
+  transition-duration: 500ms;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+/* .dark-mode {
+  background-color: black;
+  color: white;
+} */
+
