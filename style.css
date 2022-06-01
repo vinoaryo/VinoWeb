@@ -13,7 +13,6 @@ body{
   width: 49.5;
   color: black;
   transition-duration: 500ms;
-  overflow: hidden;
 }
 
 html{

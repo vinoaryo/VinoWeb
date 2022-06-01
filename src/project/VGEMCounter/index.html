@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <title>VGEM Counter</title>
+  </head>
+  <body data-role="page" style="background-color: #222; overflow: hidden;">
+    <h1 class="text-white text-center">VGem Counter</h1>
+    <div class="container">
+      <div class="input-group flex-nowrap">
+        <span class="input-group-text" id="addon-wrapping">Gem</span>
+        <input type="string" id="gem" class="form-control" placeholder="Insert your value" aria-label="Gem" aria-describedby="addon-wrapping" />
+        <span class="input-group-text" id="addon-wrapping">Rp.</span>
+        <input type="string" id="idr" class="form-control" placeholder="Price" aria-label="Total" aria-describedby="addon-wrapping" disabled />
+      </div>
+      <h5 class="text-center" ><a style="color: #eaeaea; text-decoration: none;" href="https://giyf.netlify.app" target="_blank">Click to see something amazing!</a></h5>
+    </div>
+  </body>
+  <script>
+    console.log(`\n
+
+    ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+─██████──██████─██████████████─██████████████─██████──────────██████────██████████████─██████████████─██████──██████─██████──────────██████─██████████████─██████████████─████████████████───
+─██░░██──██░░██─██░░░░░░░░░░██─██░░░░░░░░░░██─██░░██████████████░░██────██░░░░░░░░░░██─██░░░░░░░░░░██─██░░██──██░░██─██░░██████████──██░░██─██░░░░░░░░░░██─██░░░░░░░░░░██─██░░░░░░░░░░░░██───
+─██░░██──██░░██─██░░██████████─██░░██████████─██░░░░░░░░░░░░░░░░░░██────██░░██████████─██░░██████░░██─██░░██──██░░██─██░░░░░░░░░░██──██░░██─██████░░██████─██░░██████████─██░░████████░░██───
+─██░░██──██░░██─██░░██─────────██░░██─────────██░░██████░░██████░░██────██░░██─────────██░░██──██░░██─██░░██──██░░██─██░░██████░░██──██░░██─────██░░██─────██░░██─────────██░░██────██░░██───
+─██░░██──██░░██─██░░██─────────██░░██████████─██░░██──██░░██──██░░██────██░░██─────────██░░██──██░░██─██░░██──██░░██─██░░██──██░░██──██░░██─────██░░██─────██░░██████████─██░░████████░░██───
+─██░░██──██░░██─██░░██──██████─██░░░░░░░░░░██─██░░██──██░░██──██░░██────██░░██─────────██░░██──██░░██─██░░██──██░░██─██░░██──██░░██──██░░██─────██░░██─────██░░░░░░░░░░██─██░░░░░░░░░░░░██───
+─██░░██──██░░██─██░░██──██░░██─██░░██████████─██░░██──██████──██░░██────██░░██─────────██░░██──██░░██─██░░██──██░░██─██░░██──██░░██──██░░██─────██░░██─────██░░██████████─██░░██████░░████───
+─██░░░░██░░░░██─██░░██──██░░██─██░░██─────────██░░██──────────██░░██────██░░██─────────██░░██──██░░██─██░░██──██░░██─██░░██──██░░██████░░██─────██░░██─────██░░██─────────██░░██──██░░██─────
+─████░░░░░░████─██░░██████░░██─██░░██████████─██░░██──────────██░░██────██░░██████████─██░░██████░░██─██░░██████░░██─██░░██──██░░░░░░░░░░██─────██░░██─────██░░██████████─██░░██──██░░██████─
+───████░░████───██░░░░░░░░░░██─██░░░░░░░░░░██─██░░██──────────██░░██────██░░░░░░░░░░██─██░░░░░░░░░░██─██░░░░░░░░░░██─██░░██──██████████░░██─────██░░██─────██░░░░░░░░░░██─██░░██──██░░░░░░██─
+─────██████─────██████████████─██████████████─██████──────────██████────██████████████─██████████████─██████████████─██████──────────██████─────██████─────██████████████─██████──██████████─
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────`)
+
+console.log('If you see random character. Maximize your window.')
+
+    const gem = document.getElementById('gem');
+    const idr = document.getElementById('idr');
+    gem.addEventListener('keyup', function() {
+      let gemValue = gem.value;
+      
+      const gemToIDR = gemValue * 500;
+
+      let convert = gemToIDR.toLocaleString('id-ID', {
+        style: 'currency',
+        currency: 'IDR'
+      });
+
+      const sC = convert.split('');
+      sC.shift();
+      sC.shift();
+      sC.shift();
+
+      convert = sC.join('');
+      idr.value = convert
+
+    }); 
+  </script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</html>
