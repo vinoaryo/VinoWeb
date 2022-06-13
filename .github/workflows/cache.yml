@@ -1,4 +1,5 @@
 name: Cache
+on: [push]
 uses: actions/cache@v3.0.4
   with:
     # A list of files, directories, and wildcard patterns to cache and restore
